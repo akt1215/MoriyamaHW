@@ -1,0 +1,3 @@
+C:/Users/akt12/CLionProjects/moriyama/cmake-build-debug/CMakeFiles/moriyama.dir
+C:/Users/akt12/CLionProjects/moriyama/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/akt12/CLionProjects/moriyama/cmake-build-debug/CMakeFiles/rebuild_cache.dir
