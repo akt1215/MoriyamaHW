@@ -1,5 +1,6 @@
 #include <iostream>
 #include <sstream>
+#include <vector>
 
 void swap_start(int& start, int& end){
     if (start>end){
@@ -91,15 +92,53 @@ std::string fizzbuzz3(int num){
         return number;
     }
 }
+
+std::vector<std::string> fizzbuzz4(const std::vector<int>& input){
+    std::vector<std::string> output;
+    std::string tempo;
+    int t;
+    for (int i=0; i<input.size();i++){
+        tempo = std::to_string(input[i]);
+        t = 0;
+        while (tempo[t] != '\0') {
+            switch (tempo[t]) {
+                case '3':
+                    tempo.replace(tempo.find('3'), 1, "Fizz");
+                    break;
+                case '5':
+                    tempo.replace(tempo.find('5'), 1, "Buzz");
+                    break;
+            }
+            t++;
+        }
+        output.push_back(tempo);
+    }
+    return output;
+}
+
 int main() {
     int start, end;
     start = 200;
     end = 100;
     swap_start(start, end);
+//    for (int i = start; i <= end; i++){
+//        std::string word = fizzbuzz3(i);
+//        std::cout << word << ",";
+//    }
 
-    for (int i = start; i <= end; i++){
-        std::string word = fizzbuzz3(i);
-        std::cout << word << ",";
+    std::vector<int> input;
+    std::vector<std::string> output;
+
+    for (int i=start; i<=end;i++){
+        input.push_back(i);
     }
+
+    output = fizzbuzz4(input);
+
+    for (int i=0; i<output.size();i++){
+        std::cout << output[i] << ",";
+    }
+    std::cout<<"\n";
+
     return 0;
 }
