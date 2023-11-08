@@ -121,11 +121,13 @@ int main() {
     start = 200;
     end = 100;
     swap_start(start, end);
+//  For fizzbuzz1 through fizzbuzz3
 //    for (int i = start; i <= end; i++){
 //        std::string word = fizzbuzz3(i);
 //        std::cout << word << ",";
 //    }
 
+//  For fizzbuzz4
     std::vector<int> input;
     std::vector<std::string> output;
 
